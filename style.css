@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #242424;
+  color: #bdbdbd;
+  font-family: 'Lato', sans-serif;
+}
+
+.tech-section {
+  padding: 100px 40px 160px;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  font-size: 13.5px;
+  line-height: 22px;
+  opacity: 0.9;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Grid - desktop */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 980px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.left, .right {
+  padding-top: 20px;
+}
+
+.left  { padding-left:  20px; }
+.right { padding-right: 20px; }
+
+/* Bloki i teksty */
+.block {
+  margin-bottom: 70px;
+}
+
+.section-title {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 17px;
+  color: #39FFBD;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.body-text {
+  font-size: 13.8px;
+  line-height: 21px;
+}
+
+/* Punkty */
+.points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: calc(100% + 50px);
+}
+
+.points li {
+  display: flex;
+  gap: 9px;
+  font-size: 13.8px;
+  line-height: 20px;
+}
+
+.points img {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* ========== LAPTOP ========== */
+.laptop-col {
+  display: flex;
+  justify-content: center;
+}
+
+.laptop-wrapper {
+  position: relative;
+  width: 980px;
+  height: 550px;
+}
+
+/* Elipsa */
+.ellipse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1180px;
+  height: 760px;
+  background-image: url('elipsa.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+/* 🔥 NOWY BACKGROUND */
+.laptop-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 604px;
+  height: 494px;
+  opacity: 0.42;     /* dokładnie jak chciałeś */
+  z-index: 2;
+  pointer-events: none; /* totalnie nie wpływa na nic */
+}
+
+/* Laptop */
+.laptop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% - 130px), calc(-50% + 30px));
+  width: 941px;
+  height: 489px;
+  z-index: 3;
+  filter: drop-shadow(5px 6px 7.7px rgba(0, 0, 0, 0.38));
+}
+
+/* Wyrównanie bloków tekstowych */
+.applications {
+  margin-top: 80px;
+}
+
+.social {
+  margin-top: 135px;
+}
+
+/* ====================== MOBILE ====================== */
+@media (max-width: 1024px) {
+  .content-grid {
+    display: block;
+  }
+
+  .laptop-col {
+    display: none;
+  }
+
+  .laptop-bg {
+    display: none; /* ❌ ukryte na mobile */
+  }
+
+  .left, .right {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
+
+  .block {
+    margin-bottom: 20px;
+  }
+
+  .applications {
+    margin-top: 30px;
+  }
+
+  .social {
+    margin-top: 50px;
+  }
+
+  .header {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .subtitle {
+    display: none;
+  }
+
+  .main-title {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-section {
+    padding: 80px 20px 100px;
+  }
+
+  .main-title {
+    font-size: 22px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  .body-text, .points li {
+    font-size: 13.5px;
+  }
+}
+@media (max-width: 1024px) {
+  br {
+    display: none;
+  }
+}
